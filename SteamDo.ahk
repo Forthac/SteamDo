@@ -165,7 +165,6 @@ CheckLibDownloads:
 		Menu, Tray, Enable, Restart
 		Menu, Tray, Icon, Shell32.dll, 220
 	}
-	SoundBeep, 5000, 500
 	if(!stmDownloading)
 	{
 		stmDownloading := IsSteamDownloading(stmLibs)
@@ -173,7 +172,7 @@ CheckLibDownloads:
 	}
 	if(!IsSteamDownloading(stmLibs))
 	{
-		;~ run, %stmAction%
+		run, %stmAction%
 		ExitApp
 	}
 }return
